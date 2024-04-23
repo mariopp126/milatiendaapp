@@ -1,0 +1,277 @@
+<!-- tienda/templates/home.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MilaTiendaRD</title>
+    {% load static %}
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/styles.css' %}"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <header>
+      <a href="#" class="logo"> <span>MILA</span>tiendaRD </a>
+
+      <input type="checkbox" id="menu-bar" />
+      <label for="menu-bar" class="fa fa-bars"></label>
+      <nav class="navbar">
+        <a href="#inicio">inicio</a>
+        <a href="#detalles">detalles</a>
+        <a href="#nosotros">nosotros</a>
+        <a href="#opiniones">opiniones</a>
+        <a href="#contactos">contactos</a>
+      </nav>
+    </header>
+    <section class="inicio" id="inicio">
+      <div class="content">
+        <h3>VANS OF THE WALL <span>tenis</span></h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+          numquam porro praesentium est perferendis atque rem accusantium, natus
+          recusandae, deleniti provident eos aliquid. Quod nobis provident et
+          quidem a hic.
+        </p>
+        <a href="#" class="btn"> MAS DETALLES</a>
+      </div>
+      <div class="image">
+        <img
+          src="{% static 'images/vans of the wall.jpg' %}"
+          alt="foto vans of the wall"
+        />
+      </div>
+    </section>
+    <section class="detalles" id="detalles">
+      <h1 class="heading">FUNCIONES</h1>
+      <div class="caja-contenedor">
+        <div class="caja">
+          <img
+            src="{% static 'images/vans of the wall.jpg' %}"
+            alt="tenis vans of the wall"
+          />
+          <h3>clásico, pero moderno</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum cum ab
+            aperiam amet eveniet doloremque doloribus, ullam esse. Ducimus qui
+            omnis voluptates accusantium hic ea possimus nemo vel non aperiam!
+          </p>
+          <a href="#" class="btn">ver más</a>
+        </div>
+        <div class="caja">
+          <img
+            src="{% static 'images/wear.jfif' %}"
+            alt="tenis vans of the wall"
+          />
+          <h3>Siempre a la moda</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum cum ab
+            aperiam amet eveniet doloremque doloribus, ullam esse. Ducimus qui
+            omnis voluptates accusantium hic ea possimus nemo vel non aperiam!
+          </p>
+          <a href="#" class="btn">ver más</a>
+        </div>
+        <div class="caja">
+          <img
+            src="{% static 'images/Cosas que todo hombre debe cuidar en sus zapatos y tenis.jfif' %}"
+            alt="tenis vans of the wall"
+          />
+          <h3>elegancia ante todo</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum cum ab
+            aperiam amet eveniet doloremque doloribus, ullam esse. Ducimus qui
+            omnis voluptates accusantium hic ea possimus nemo vel non aperiam!
+          </p>
+          <a href="#" class="btn">ver más</a>
+        </div>
+      </div>
+    </section>
+    <section class="nosotros" id="nosotros">
+      <h1 class="heading">nuestra tienda</h1>
+      <div class="columna">
+        <div class="image">
+          <img
+            src="{% static 'images/WhatsApp Image 2021-08-30 at 12.47.02 PM.jpeg' %}"
+            alt=""
+          />
+        </div>
+
+        <div class="content">
+          <h3>Calidad excepcional</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A laborum
+            odio sit ipsam animi consequuntur autem! Itaque aspernatur quae
+            blanditiis, esse placeat atque vel consequatur exercitationem,
+            asperiores beatae amet unde.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus
+            maxime at esse ab perferendis iure repellat, vitae beatae qui
+            quaerat debitis consequuntur omnis, earum iusto a, quo nostrum quis
+            veniam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut
+            itaque maxime quia distinctio dolor eos consectetur nisi laboriosam
+            ipsum et. Labore libero aliquam, dignissimos eveniet veniam
+            repellendus perspiciatis quos impedit!
+          </p>
+        </div>
+        <div class="buttoms">
+          <a href="" class="btn">ubicación</a>
+        </div>
+      </div>
+    </section>
+    <section class="opiniones" id="opiniones">
+      <h1 class="heading">opiniones de clientes</h1>
+      <div class="caja-contenedor">
+        <div class="caja">
+          <div class="user">
+            <img
+              src="{% static 'images/Cosas que todo hombre debe cuidar en sus zapatos y tenis.jfif' %}"
+              alt=""
+            />
+            <h3>pedro</h3>
+          </div>
+          <div class="starts">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="comentario">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+              doloribus eaque rem quod magnam cupiditate quia libero, velit esse
+              officia! Culpa officia, tempora iure pariatur aut dolorem officiis
+              totam consectetur.
+            </p>
+          </div>
+        </div>
+        <div class="caja">
+          <div class="user">
+            <img src="{% static 'images/wear.jfif' %}" alt="" />
+            <h3>juan</h3>
+          </div>
+          <div class="starts">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="comentario">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+              doloribus eaque rem quod magnam cupiditate quia libero, velit esse
+              officia! Culpa officia, tempora iure pariatur aut dolorem officiis
+              totam consectetur.
+            </p>
+          </div>
+        </div>
+        <div class="caja">
+          <div class="user">
+            <img src="{% static 'images/Twitter.jfif' %}" alt="" />
+            <h3>jose</h3>
+          </div>
+          <div class="starts">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="comentario">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+              doloribus eaque rem quod magnam cupiditate quia libero, velit esse
+              officia! Culpa officia, tempora iure pariatur aut dolorem officiis
+              totam consectetur.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contactos" id="contactos">
+      <div class="image">
+        <img src="{% static 'images/vans of the wall.jpg' %}" alt="" />
+      </div>
+      <form method="post">
+        <h2 class="heading">Contacto</h2>
+
+        {% if success_message %}
+        <div>{{ success_message }}</div>
+        {% endif %} {% csrf_token %}
+        
+        <div class="inputcaja">
+          <label for="{{ form.name.id_for_label }}"
+            >{{ form.name.label }}</label
+          >
+          {{ form.name }}
+        </div>
+        <div class="inputcaja">
+          <label for="{{ form.email.id_for_label }}"
+            >{{ form.email.label }}</label
+          >
+          {{ form.email }}
+        </div>
+        <div class="inputcaja">
+          <label for="{{ form.message.id_for_label }}"
+            >{{ form.message.label }}</label
+          >
+          {{ form.message }}
+        </div>
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+    </section>
+    <footer>
+      <div class="footer">
+        <div class="caja-contenedor">
+          <div class="caja">
+            <h3>noticias e informacion</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Consequuntur libero qui excepturi autem unde quam nostrum eum nisi
+              magni nemo possimus laboriosam cum, quod sunt quaerat similique
+              adipisci officiis earum.
+            </p>
+          </div>
+          <div class="caja">
+            <h3>nuestras redes</h3>
+            <a href="#">facebook</a>
+            <a href="#">instagram</a>
+            <a href="#">pinterest</a>
+            <a href="#">twitter</a>
+          </div>
+          <div class="caja">
+            <h3>más informacion</h3>
+            <div class="info">
+              <i class="fas fa-phone"></i>
+              <p>809-565-7998 <br />809-697-8369</p>
+            </div>
+            <div class="info">
+              <i class="fas fa-envelope"></i>
+              <p>mpucheu126@gmail.com</p>
+            </div>
+            <div class="info">
+              <i class="fas fa-map-marker-alt"></i>
+              <p>santo domingo, republica dominicana</p>
+            </div>
+          </div>
+        </div>
+        <h1 class="creditos">&copy, copyright @ 2021 Mario Pucheu</h1>
+      </div>
+    </footer>
+  </body>
+</html>
