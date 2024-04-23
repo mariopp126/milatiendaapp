@@ -42,6 +42,3 @@ Below are the steps required to install and configure the project in your develo
 
 Once these steps are completed, the project will be available at `http://localhost:8000/`. You can access this URL from your web browser to start using the application.
 
-## Uso
-
-Explica cómo usar y ejecutar el proyecto, incluyendo comandos de terminal, opciones de configuración, etc. Puedes incluir ejemplos de comandos aquí.
