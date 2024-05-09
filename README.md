@@ -1,11 +1,11 @@
 # milatiendaapp
 Online clothing store
 
-## Requisitos Previos
+## Prerequisites
 
 - To run the project you need to have docker previously installed. You can download and install Docker from [Docker Hub](https://hub.docker.com/).
 
-## Instalación
+## Instalation
 
 Below are the steps required to install and configure the project in your development environment:
 

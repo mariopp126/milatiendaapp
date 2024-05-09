@@ -6,7 +6,7 @@ import sys
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'milatiendard.settings')
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "milatiendard.settings_prod" if 'PRODUCTION' in os.environ else "milatiendard.settings_local")
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:

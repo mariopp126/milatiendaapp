@@ -1,0 +1,8 @@
+<!-- En tu archivo HTML -->
+
+<form method="post" action="{% url 'guardar_opinion' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Enviar opinión</button>
+  </form>
+  

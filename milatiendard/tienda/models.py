@@ -9,6 +9,9 @@ class Producto(models.Model):
 
 class Opiniones(models.Model):
     autor = models.CharField(max_length=100)
-    comentario = models.TextField()
-    rating = models.IntegerField()
+    opinion = models.TextField()
+    calificacion = models.IntegerField()
     fecha = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.autor} ({self.calificacion}) {self.fecha}"

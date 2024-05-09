@@ -1,4 +1,5 @@
 from django import forms
+from .models import Opiniones
 
 class ContactForm(forms.Form):
 
@@ -14,3 +15,7 @@ class ContactForm(forms.Form):
         label="Mensaje"
     )
 
+class OpinionForm(forms.ModelForm):
+    class Meta:
+        model = Opiniones
+        fields = ['autor', 'opinion', 'calificacion']

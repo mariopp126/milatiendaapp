@@ -1,9 +1,9 @@
 # tienda/urls.py
 
 from django.urls import path
-from . import views
+from .views import home
 
 urlpatterns = [
-    path('', views.home, name='home'),
-    path('opiniones/', views.opiniones, name='opiniones'),
+    path('', home, name='home'),
+    path('save_opinion/', home, name='save_opinion'),
 ]

@@ -134,6 +134,17 @@
     </section>
     <section class="opiniones" id="opiniones">
       <h1 class="heading">opiniones de clientes</h1>
+
+      <!-- En tu archivo HTML -->
+
+      <form method="post" action="{% url 'save_opinion' %}">
+        {% if success_message_opinion %}
+        <div>{{ success_message_opinion }}</div>
+        {% endif %} {% csrf_token %}
+        {% csrf_token %} {{ opinion_form.as_p }}
+        <button type="submit" class="btn" name="submit_opinion">Enviar opinión</button>
+      </form>
+
       <div class="caja-contenedor">
         <div class="caja">
           <div class="user">
@@ -213,26 +224,26 @@
         {% if success_message %}
         <div>{{ success_message }}</div>
         {% endif %} {% csrf_token %}
-        
+
         <div class="inputcaja">
-          <label for="{{ form.name.id_for_label }}"
-            >{{ form.name.label }}</label
+          <label for="{{ contact_form.name.id_for_label }}"
+            >{{ contact_form.name.label }}</label
           >
-          {{ form.name }}
+          {{ contact_form.name }}
         </div>
         <div class="inputcaja">
           <label for="{{ form.email.id_for_label }}"
-            >{{ form.email.label }}</label
+            >{{ contact_form.email.label }}</label
           >
-          {{ form.email }}
+          {{ contact_form.email }}
         </div>
         <div class="inputcaja">
           <label for="{{ form.message.id_for_label }}"
-            >{{ form.message.label }}</label
+            >{{ contact_form.message.label }}</label
           >
-          {{ form.message }}
+          {{ contact_form.message }}
         </div>
-        <button type="submit" class="btn">Enviar</button>
+        <button type="submit" class="btn" name="submit_contact">Enviar</button>
       </form>
     </section>
     <footer>
