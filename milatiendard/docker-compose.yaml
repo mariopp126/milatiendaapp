@@ -1,6 +1,16 @@
 version: '3'
 
 services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - "5432:5432"
+    networks:
+      - milanet
   web:
     build: .
     command: python manage.py runserver 0.0.0.0:8000
@@ -15,16 +25,7 @@ services:
       DB_HOST: db
     networks:
       - milanet
-  db:
-    image: postgres:16
-    environment:
-      POSTGRES_DB: ${DB_NAME}
-      POSTGRES_USER: ${DB_USER}
-      POSTGRES_PASSWORD: ${DB_PASSWORD}
-    ports:
-      - "5432:5432"
-    networks:
-      - milanet
 
 networks:
   milanet:
+

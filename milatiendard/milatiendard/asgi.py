@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'milatiendard.settings')
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "milatiendard.settings_prod" if 'PRODUCTION' in os.environ else "milatiendard.settings_local")
 
 application = get_asgi_application()

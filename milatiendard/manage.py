@@ -5,16 +5,17 @@ import sys
 
 
 def main():
-    """Run administrative tasks."""
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "milatiendard.settings_prod" if 'PRODUCTION' in os.environ else "milatiendard.settings_local")
-    try:
-        from django.core.management import execute_from_command_line
-    except ImportError as exc:
-        raise ImportError(
-            "Couldn't import Django. Are you sure it's installed and "
-            "available on your PYTHONPATH environment variable? Did you "
-            "forget to activate a virtual environment?"
-        ) from exc
+    
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'milatiendard.settings')
+    environment = os.getenv('DJANGO_ENV', 'development')
+
+    if environment == 'production':
+        os.environ['DJANGO_SETTINGS_MODULE'] = 'milatiendard.settings_prod'
+    elif environment == 'staging':
+        os.environ['DJANGO_SETTINGS_MODULE'] = 'milatiendard.settings_local'
+
+    from django.core.management import execute_from_command_line
+
     execute_from_command_line(sys.argv)
 
 

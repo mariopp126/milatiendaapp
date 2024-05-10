@@ -218,7 +218,7 @@
       <div class="image">
         <img src="{% static 'images/vans of the wall.jpg' %}" alt="" />
       </div>
-      <form method="post">
+      <form method="post" action="{% url 'save_contact' %}">
         <h2 class="heading">Contacto</h2>
 
         {% if success_message %}

@@ -1,9 +1,10 @@
 # tienda/urls.py
 
 from django.urls import path
-from .views import home
+from .views import contacto, opinion, home
 
 urlpatterns = [
     path('', home, name='home'),
-    path('save_opinion/', home, name='save_opinion'),
+    path('contacto/', contacto, name='save_contact'),
+    path('opinion/', opinion, name='save_opinion'),
 ]
