@@ -3,10 +3,12 @@ version: '3'
 services:
   db:
     image: postgres:16
-    environment:
-      POSTGRES_DB: ${DB_NAME}
-      POSTGRES_USER: ${DB_USER}
-      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    #env_file:
+    #  - .env
+    #environment:
+    #  POSTGRES_DB: ${DB_NAME}
+    #  POSTGRES_USER: ${DB_USER}
+    #  POSTGRES_PASSWORD: ${DB_PASSWORD}
     ports:
       - "5432:5432"
     networks:
@@ -18,11 +20,13 @@ services:
       - "8000:8000"
     depends_on:
       - db
-    environment:
-      DB_NAME: ${DB_NAME}
-      DB_USER: ${DB_USER}
-      DB_PASSWORD: ${DB_PASSWORD}
-      DB_HOST: db
+    #environment:
+    #  DB_NAME: ${DB_NAME}
+    #  DB_USER: ${DB_USER}
+    #  DB_PASSWORD: ${DB_PASSWORD}
+    #  DB_HOST: db
+    #volumes:
+    #  - ./milatiendard/settings_prod.py:/app/settings.py
     networks:
       - milanet
 

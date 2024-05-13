@@ -10,6 +10,9 @@ COPY . /app
 # Instalar las dependencias del proyecto
 RUN pip install -r requirements.txt
 
+# Copiar archivo de configuración específico (por ejemplo, settings.prod.py)
+#COPY milatiendard/settings_prod.py /app/settings.py
+
 # Expone el puerto en el que Django correrá
 EXPOSE 8000
 

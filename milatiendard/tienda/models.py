@@ -14,4 +14,7 @@ class Opiniones(models.Model):
     fecha = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.autor} ({self.calificacion}) {self.fecha}"
+        return f"{self.autor} {self.opinion} ({self.calificacion}) {self.fecha}"
+    
+    class Meta:
+        db_table = 'tienda_opiniones'
